@@ -5,49 +5,65 @@
 // - 'favorite food'
 // - bestFriend (object with the same 3 properties as above)
 
-const firstName4 = 'Brenda'
-const lastName4 = 'G'
+const friendName = 'bestFriend'
+const friendLast = 'G'
 
-const brenda ={
-  firstName4,
-  lastName4,
+const bestFriend ={
+  friendName,
+  friendLast,
   'favorite food': 'tacos',
-  bestFriend: ''
+  friendFood: ''
 }
 
-
-
-const firstName3 = 'Pablo'
-const lastName3 = 'Marcel'
+const selfName = 'Pablo'
+const selfLast = 'Marcel'
 
 const personMe ={
-  firstName3,
-  lastName3,
-  'favorite food': 'salmon',
-  bestFriend: brenda
+  selfName,
+  selfLast,
+  'favorite food': 'Salmon',
+  bestFriend: bestFriend
 }
-
-console.log('my best friend\'s name '+personMe.bestFriend['firstName4'])
-console.log(personMe.bestFriend['lastName4'])
-console.log(personMe.bestFriend['favorite food'])
-console.log(personMe.bestFriend['bestFriend'])
-console.log('my favorite food '+personMe['favorite food'])
 
 // 2. console.log best friend's firstName and your favorite food
 
+console.log('my best friend\'s name '+personMe.bestFriend['friendName'])
+// console.log(personMe.bestFriend['friendLast'])
+// console.log(personMe.bestFriend['favorite food'])
+// console.log(personMe.bestFriend['friendFood'])
+console.log('my favorite food '+personMe['favorite food'])
 
 // 3. Create an array to represent this tic-tac-toe board
 // -O-
 // -XO
 // X-X
 
+const twoDimensions =[
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+]
+
+console.log(twoDimensions[0], twoDimensions[1],twoDimensions[2])
+
+const ticTac =[
+  ['-','o','-'],
+  ['-','x','o'],
+  ['x','-','x']
+]
+
+console.log('\n')
+
+ticTac[0][2]='o'
 
 // 4. After the array is created, 'O' claims the top right square.
 // Update that value.
 
-
 // 5. Log the grid to the console.
 
+console.log(ticTac[0].join(""))
+console.log(ticTac[1].join(""))
+console.log(ticTac[2].join(""))
 
 // 6. You are given an email as string myEmail, make sure it is in correct email format.
 // Should be 1 or more characters, then @ sign, then 1 or more characters, then dot, then one or more characters - no whitespace

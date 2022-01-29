@@ -5,6 +5,33 @@
 // - 'favorite food'
 // - bestFriend (object with the same 3 properties as above)
 
+const firstName4 = 'Brenda'
+const lastName4 = 'G'
+
+const brenda ={
+  firstName4,
+  lastName4,
+  'favorite food': 'tacos',
+  bestFriend: ''
+}
+
+
+
+const firstName3 = 'Pablo'
+const lastName3 = 'Marcel'
+
+const personMe ={
+  firstName3,
+  lastName3,
+  'favorite food': 'salmon',
+  bestFriend: brenda
+}
+
+console.log('my best friend\'s name '+personMe.bestFriend['firstName4'])
+console.log(personMe.bestFriend['lastName4'])
+console.log(personMe.bestFriend['favorite food'])
+console.log(personMe.bestFriend['bestFriend'])
+console.log('my favorite food '+personMe['favorite food'])
 
 // 2. console.log best friend's firstName and your favorite food
 

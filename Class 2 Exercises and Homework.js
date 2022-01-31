@@ -89,10 +89,10 @@ const months = [
 ];
 
 const date = dueDate.getDate();
-const month = dueDate.getMonth();
+let month = dueDate.getMonth();
 const year = dueDate.getFullYear();
 
-const dueDateTime = (`<time datetime="${year}-${month+1}-${date}">${months[month]} ${date}, ${year}</time>`);
+const dueDateTime = (`<time datetime="${year}-${(month+1).toString().padStart(2,'0')}-${date}">${months[month]} ${date}, ${year}</time>`);
 
 // 10. log this value using console.log
 

@@ -44,6 +44,7 @@ ttt.map(row => console.log(row.join(' ')));
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 const email = "foo@bar.baz";
+// NOTE: this regex isn't intended to match all possible email inputs...it is meant to be good, not perfect
 let regex = /^([^\s@]+)@([^\s\.,@]+)\.{1}([^\s\.,]+)$/;
 
 if(regex.test(email)) {
@@ -56,16 +57,17 @@ else {
 // i.e. '1/21/2019' - but this could be any date.
 // Convert this string to a Date
 
-const assignmentDate = '1/21/2019';
-const dateString = new Date(assignmentDate);
-const utcDate = dateString.toUTCString();
+const dateString = '1/21/2019';
+const assignedDate = new Date(dateString);
+console.log(`Assigned date = ${assignedDate.toUTCString()}`);
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
 
-const assignmentDateMilli = new Date(assignmentDate).getTime();
-const dueDate = new Date(assignmentDateMilli + (7*24*60*60*1000));
-const dueDateString = dueDate.toUTCString();
+//const assignmentDateMilli = new Date(assignmentDate).getTime();
+
+const dueDate = new Date(assignedDate.setDate(assignedDate.getDate()) + 7*24*60*60*1000);
+console.log(`Due date = ${dueDate.toUTCString()}`);
 
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>

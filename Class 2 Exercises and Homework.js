@@ -89,11 +89,14 @@ const dueMonth = dueDate.getMonth()+1;
 const dueMonthName = months[dueDate.getMonth()];
 // Get the year of dueDate
 const dueYear = dueDate.getFullYear().toString();
-// Create string "timeTag"
+// Create an HTML tag called "timeTag"
 const timeTag =`<time datetime="${dueYear}-${dueMonth.toString().padStart(2,'0')}-${dueDay}">${dueMonthName} ${dueDay}, ${dueYear}</time>`;
 // Display time tag in HTML page
-document.getElementById("dueDate").textContent(timeTag);
-
+const para = document.createElement('p')
+const node = document.createTextNode(timeTag);
+para.appendChild(node);
+const elementDueDate = document.getElementById("dueDate");
+elementDueDate.appendChild(para);
 
 // 10. log this value using console.log
 console.log(timeTag);

@@ -92,8 +92,8 @@ const date = dueDate.getDate();
 const month = dueDate.getMonth();
 const year = dueDate.getFullYear();
 
-const dateTime = (`<time datetime="${year}-${month+1}-${date}">${months[month]} ${date}, ${year}</time>`);
+const dueDateTime = (`<time datetime="${year}-${month+1}-${date}">${months[month]} ${date}, ${year}</time>`);
 
 // 10. log this value using console.log
 
-console.log(dateTime);
+console.log(dueDateTime);

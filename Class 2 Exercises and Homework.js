@@ -107,14 +107,25 @@ function getDueDate4HTML (inputDate, days) {
   
   let dueDate = new Date(dueDateMilliSec);
 
-  let answerYear = dueDate.getFullYear();
+  let answerYearStr = String(dueDate.getFullYear());
   let answerMonth = dueDate.getMonth() + 1;
+  let answerMonthStr = String(dueDate.getMonth() + 1);
+  if (answerMonthStr.length < 2) {
+    answerMonthStr = answerMonthStr.padStart(2, '0');
+  } else {
+    answerMonthStr = answerMonthStr;
+  };
   let monthName = months[answerMonth - 1];
 
-  let answerDate = dueDate.getDate();
-  let answer = `${monthName} ${answerDate}, ${answerYear}`;
+  let answerDateStr = String(dueDate.getDate());
+  if (answerDateStr.legnth < 2) {
+    answerDateStr = answerDateStr.padStart(2, 0);
+  } else {
+    answerDateStr = answerDateStr;
+  };
+  let answer = `${monthName} ${answerDateStr}, ${answerYearStr}`;
 
-  return `<time datetime="${answerYear}-${answerMonth}-${answerDate}">${answer}</time>`;
+  return `<time datetime="${answerYearStr}-${answerMonthStr}-${answerDateStr}">${answer}</time>`;
 }
 
 getDueDate4HTML(assignmentDate, 7);

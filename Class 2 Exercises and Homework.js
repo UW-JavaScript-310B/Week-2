@@ -91,7 +91,6 @@ const year = dueDate.getFullYear();
 
 let datestring =  dueDate.getFullYear()+ "-" +("0"+(dueDate.getMonth()+1)).slice(-2) + "-" +("0" + dueDate.getDate()).slice(-2);
 
-
 const timeTag = document.createElement("time");
 timeTag.setAttribute('datetime', datestring);
 timeTag.innerText = dueDateMonth + " " +("0" + dueDate.getDate()).slice(-2) + ", " +year;

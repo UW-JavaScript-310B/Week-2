@@ -54,8 +54,65 @@ ${ticTacToe[2]}`);
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
 
-/\w+[@]\w+[.]\S/
-/\S+[@{1}]\S+[.{1,}]+\w{1,}/
+/* Following lists of emails were used for testing. 
+// Both are from https://gist.github.com/cjaoude/fd9910626629b53c4d25
+
+const validEmails = [
+  "email@example.com",
+  "firstname.lastname@example.com",
+  "firstname+lastname@example.com",
+  '"email"@example.com',
+  "1234567890@example.com",
+  "email@example-one.com",
+  "_______@example.com",
+  "email@example.name",
+  "email@example.museum",
+  "email@example.co.jp",
+  "firstname-lastname@example.com",
+]
+
+const invalidEmails = [
+  "plainaddress",
+  "#@%^%#$@#$@#.com",
+  "@example.com",
+  "Joe Smith <email@example.com>",
+  "email.example.com",
+  "email@example@example.com",
+  ".email@example.com",
+  "email.@example.com",
+  "email..email@example.com",
+  "あいうえお@example.com",
+  "email@example.com (Joe Smith)",
+  "email@example",
+  "email@-example.com",
+  "email@example.web",
+  "email@111.222.333.44444",
+  "email@example..com",
+  "Abc..123@example.com",
+]
+*/
+
+// Email to validate goes here:
+let myEmail = 
+
+function testEmail (email) {
+  let emailTestRegExp = new RegExp(/[\w!#$%&'"*+/=?^_`{|}~-]+([-+.']\w+)*@\w+([-.]\w+)*\.[a-z]+([-.]\w+)*/);
+  let boolValue = (emailTestRegExp.test(email));
+
+  if (boolValue == true) {
+    return "This string contains a valid email."
+  } else {
+    return "This string doesn't contain a valid email."
+  }
+}
+
+console.log(testEmail(myEmail));
+
+// This code used for testing. Un-comment function call(s) and above array(s) to test.
+// Replace "#" with index of VALID email you want to test.
+//console.log(testEmail(validEmails[#])); 
+// Replace "#" with index of INVALID email you want to test.
+//console.log(testEmail(invalidEmails[#]));
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.

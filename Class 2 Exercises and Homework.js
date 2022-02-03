@@ -48,10 +48,10 @@ const email = "foo@bar.baz";
 let regex = /^([^\s@]+)@([^\s\.,@]+)\.{1}([^\s\.,]+)$/;
 
 if(regex.test(email)) {
-  console.log(`Valid email address\n--\n$Username = ${email.match(regex)[1]}\nHost = ${email.match(regex)[2]}\nTLD = ${email.match(regex)[3]}`);
+  console.log(`Valid email address\n--\nUsername = ${email.match(regex)[1]}\nHost = ${email.match(regex)[2]}\nTLD = ${email.match(regex)[3]}`);
 }
 else {
-	console.log(`Invalid email address`);
+  console.log(`Invalid email address`);
 }
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.

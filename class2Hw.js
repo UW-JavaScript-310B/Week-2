@@ -43,7 +43,7 @@ Grid 1:
 `)
 // 4. After the array is created, 'O' claims the top right square.
 // Update that value.
-ticTacArray[0]=['O']
+ticTacArray[2]=['O']
 
 
 // 5. Log the grid to the console.
@@ -127,7 +127,6 @@ const months = [
   'December'
 ];
 
-//create html tag
 let htmlTag = `<time datetime="${laterDate.getFullYear()}-${laterDate.getMonth()}-${laterDate.getDate()}">${months[laterDate.getMonth()]} ${laterDate.getDate()}, ${laterDate.getFullYear()}</time>`
 document.write(htmlTag)
 

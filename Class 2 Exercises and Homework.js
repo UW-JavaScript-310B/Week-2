@@ -5,22 +5,42 @@
 // - 'favorite food'
 // - bestFriend (object with the same 3 properties as above)
 
+const myObject = {
+  firstName: 'Dan',
+  lastName: 'Cartwright',
+  'favorite food': 'Pizza',
+  bestFriend: {
+    firstName: 'Kevin',
+    lastName: 'Bacon',
+    'favorite food': 'Pasta'}};
 
 // 2. console.log best friend's firstName and your favorite food
 
+console.log(myObject.bestFriend['favorite food']);
 
 // 3. Create an array to represent this tic-tac-toe board
 // -O-
 // -XO
 // X-X
 
+const ticTacToe = [
+  ['-', 'O', '-'], 
+  ['-', 'x', 'O'],
+  ['x', '-', 'x']];
+
 
 // 4. After the array is created, 'O' claims the top right square.
 // Update that value.
 
+ticTacToe[0][2] = 'O';
+
+// ticTacToe[0].splice(2, 1, '0'); // another solution 
 
 // 5. Log the grid to the console.
 
+console.log(ticTacToe[0]);
+console.log(ticTacToe[1]);
+console.log(ticTacToe[2]);
 
 // 6. You are given an email as string myEmail, make sure it is in correct email format.
 // Should be 1 or more characters, then @ sign, then 1 or more characters, then dot, then one or more characters - no whitespace
@@ -29,16 +49,24 @@
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
 
+const testEmail = 'foo@bar.baz';
+const regex = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gm;
+console.log(regex.test(testEmail));
+
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
 // Convert this string to a Date
 const assignmentDate = '1/21/2019';
+const conversionDate = new Date (Date.parse(assignmentDate));
+console.log(conversionDate);
 
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
 
+const dueDate = new Date (conversionDate.setDate(conversionDate.getDate()+ 7));
+console.log(dueDate);
 
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>
@@ -58,5 +86,16 @@ const months = [
   'December'
 ];
 
+const monthToDisplay = months[dueDate.getMonth()];
+const dateToDisplay = dueDate.getDate();
+const yearToDisplay = dueDate.getFullYear();
+document.getElementById("dateTime").innerHTML = `${monthToDisplay} ${dateToDisplay}, ${yearToDisplay}`;
+
+const finalDate = dueDate.toISOString().split('T')[0];
+document.getElementById("dateTime").dateTime = finalDate;
 
 // 10. log this value using console.log
+
+console.log(`${monthToDisplay} ${dateToDisplay}, ${yearToDisplay}`);
+console.log(finalDate);
+console.log(`<time datetime=${finalDate}>${monthToDisplay} ${dateToDisplay}, ${yearToDisplay}</time>`);

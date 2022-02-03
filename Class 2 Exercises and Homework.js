@@ -92,7 +92,7 @@ const invalidEmails = [
 ]
 */
 
-// Email to validate goes here:
+// Email to validate goes here: (or copy-paste from above arrays)
 let myEmail = 
 
 function testEmail (email) {

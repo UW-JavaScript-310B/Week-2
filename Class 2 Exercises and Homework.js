@@ -86,14 +86,31 @@ console.log(emailTest)
 
 const assignmentDate = '1/21/2019';
 
+//date is zero indexed
+
+const date = new Date(assignmentDate);
+const [month, day, year]       = [date.getMonth(), date.getDate(), date.getFullYear()];
+
+console.log("month index is " +month);
+console.log("day is " +day);
+console.log("year is " +year);
+console.log("date is " +date);
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
 
+var dueDate = new Date(assignmentDate);
+
+dueDate.setDate(dueDate.getDate()+7);
+
+console.log(dueDate)
 
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>
 // I have provided a months array to help
+
+const [dueMonth, dueDay, dueYear]       = [dueDate.getMonth(), date.getDate(), date.getFullYear()];
+
 const months = [
   'January',
   'February',
@@ -109,5 +126,12 @@ const months = [
   'December'
 ];
 
+console.log(months[dueMonth])
+console.log(dueDay)
+console.log(dueYear)
+
+htmlTimeTag= '<time dateTime="YYYY-MM-DD">'+months[dueMonth]+" "+dueDay+","+" "+dueYear+"</time>"
 
 // 10. log this value using console.log
+
+console.log(htmlTimeTag)

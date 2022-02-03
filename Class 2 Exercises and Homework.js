@@ -126,12 +126,12 @@ const months = [
   'December'
 ];
 
-console.log(months[dueMonth])
-console.log(dueDay)
-console.log(dueYear)
+console.log(months[dueMonth]);
+console.log(dueDay);
+console.log(dueYear);
 
-htmlTimeTag= '<time dateTime="YYYY-MM-DD">'+months[dueMonth]+" "+dueDay+","+" "+dueYear+"</time>"
+htmlTimeTag= '<time dateTime="YYYY-MM-DD">'+months[dueMonth]+" "+dueDay+","+" "+dueYear+"</time>";
 
 // 10. log this value using console.log
 
-console.log(htmlTimeTag)
+console.log(htmlTimeTag);

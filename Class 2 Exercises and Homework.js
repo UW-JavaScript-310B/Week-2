@@ -72,10 +72,18 @@ console.log(ticTac[2].join(""))
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
 
+email = 'foo@bar-bar.baz'
+
+// var emailTest = email.match(/^\w+@[a-zA-Z0-9_-]+?\.[a-zA-Z]{1,3}$/)
+
+var emailTest = email.match(/^\w+@[a-zA-Z0-9_-]+?\.[a-zA-Z]+$/)
+
+console.log(emailTest)
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
 // Convert this string to a Date
+
 const assignmentDate = '1/21/2019';
 
 

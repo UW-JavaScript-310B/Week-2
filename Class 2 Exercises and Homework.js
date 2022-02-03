@@ -156,7 +156,10 @@ console.log(textMonth);
 
 dueDate = `${numericFullYear}-${numericMonth}-${numericDate}`;
 dueDateText = `${textMonth} ${numericDate}, ${numericFullYear}`;
+htmlTag = `'<time datetime="'${dueDate}'">'${dueDateText}'</time>'`
 console.log(' ');
 console.log('Display date format for HTML tag');
 console.log(dueDate);
 console.log(dueDateText);
+console.log(htmlTag)
+

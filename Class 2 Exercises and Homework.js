@@ -96,4 +96,4 @@ const dueDateTime = (`<time datetime="${year}-${(month+1).toString().padStart(2,
 
 // 10. log this value using console.log
 
-console.log(dueDateTime);
+console.log(dueDateTime);  // NOTE: This approach of outputting a string value results in the conversion of some characters to HTML entities and the escaping of quotation marks so the results look a bit goofy. To avoid this situation, one could output this HTML element by first using the document.createElement() method, setting the datetime attribute, adding the text, and adding to the body element.

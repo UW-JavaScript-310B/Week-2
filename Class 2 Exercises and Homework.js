@@ -51,7 +51,6 @@ console.log(ticTacToe[2]);
 
 var myEmail = "foo@bar.baz";
 const emailRegex = new RegExp("\S+[@]\S+[.]\S+");
-console.log(emailRegex.test(myEmail));
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.

@@ -63,19 +63,25 @@ const ticTacToeBoard1 = console.log(`
 // Hints:
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
+
+const myEmail = notarealemail@mail.com
 const regexCheck = new RegExp([\w]+@([\w]+\.)+[\w]);
+console.log(regexCheck.test(myEmail));
 
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
 // Convert this string to a Date
+
 const assignmentDate = '1/21/2019';
-
-
+const dateString = new Date(assignmentDate);
+console.log(dateString.toDateString());
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
 
+let dueDate = new Date(assignmentDate);
+dueDate.setDate(dueDate.getDate()+7);
 
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>

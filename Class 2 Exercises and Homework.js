@@ -62,6 +62,7 @@ console.log(row3);
 
 
 const regex = /(\w+)+(@)+(\w+)+(.)+(\w+)/;
+regex.test('foo@bar.baz');
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.

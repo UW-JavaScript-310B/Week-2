@@ -8,8 +8,7 @@
 let person = {firstName: "Yuhong",
               lastName: "Wang",
               "favorite food": "pasta",
-              bestFriend: person};
-person.bestFriend = {firstName: "Jenny", lastName: "Smith", "favorite food": "pizza"}
+              bestFriend: {firstName: "Jenny", lastName: "Smith", "favorite food": "pizza"}};
 console.log(person) 
 // result is as follows:
 //{firstName: 'Yuhong', lastName: 'Wang', favorite food: 'pasta', bestFriend: {…}}
